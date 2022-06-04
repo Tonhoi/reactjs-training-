@@ -1,24 +1,32 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+
+class Log extends Component {
+  state = {
+    name: "Hội",
+    age: 20
+  }
+  handleChangeName = (e:any) => {
+    this.setState({
+      name: e.target.value
+    })
+  }
+  render() {
+    return (
+      <div>
+        <input type="text" value={this.state.name} onChange={(e) => this.handleChangeName(e)} />
+
+        My name is {this.state.name}
+      </div>
+    );
+  }
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Log />
     </div>
   );
 }
