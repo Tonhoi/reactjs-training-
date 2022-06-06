@@ -1,32 +1,15 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, useState  } from 'react';
+import Log from './Trainning/DAY1';
+import Mounting from './Trainning/DAY2';
 
-class Log extends Component {
-  state = {
-    name: "Hội",
-    age: 20
-  }
-  handleChangeName = (e:any) => {
-    this.setState({
-      name: e.target.value
-    })
-  }
-  render() {
-    return (
-      <div>
-        <input type="text" value={this.state.name} onChange={(e) => this.handleChangeName(e)} />
 
-        My name is {this.state.name}
-      </div>
-    );
-  }
-}
 
 function App() {
+  const [mount, setMount] = useState(false)
   return (
     <div className="App">
-      <Log />
+      <button onClick={(e) => setMount(!mount)}>Click me</button>
+      {mount && <Mounting />}
     </div>
   );
 }
