@@ -8,5 +8,9 @@ const Mounting = () => {
         </div>
     );
 };
+ /*   {<button onClick={(e) => setMount(!mount)}>Click me</button>
+        {mount && <Mounting />} } 
+        (Bỏ cái này vào file app.tsx)        
+*/
 
 export default Mounting;
