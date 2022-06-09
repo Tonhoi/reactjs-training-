@@ -1,12 +1,12 @@
 import React, { Component, PureComponent } from 'react';
 import './index.css';
-import HandleInput from './Trainning/DAY4/HandleInput';
+import TodoList from './Trainning/DAY5/TodoList';
 
 class App extends Component {
     render() {
         return (
             <div className="App">
-                <HandleInput></HandleInput>
+                <TodoList></TodoList>
             </div>
         );
     }
