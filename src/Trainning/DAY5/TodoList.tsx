@@ -21,9 +21,7 @@ class TodoList extends Component<{}, { [key: string]: string | string[] }> {
         });
     }
     handleRenderList(e: any) {
-        if (this.state.check === 'true') {
-            this.handleUpdate(e);
-        } else if (this.state.check === 'false') {
+        if (this.state.check === 'false') {
             this.setState((prev: any) => {
                 return {
                     lists: [...prev.lists, prev.input],
